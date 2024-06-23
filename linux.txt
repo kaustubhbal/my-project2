@@ -1,0 +1,46 @@
+jobs -l = it is used to show pid and job description.
+
+Adjust process priority-
+
+- when linux process star , start with specific priority
+- by/ default all regular process aare equal, and are started with the same priority, which is the priority no. 0
+- we can change the default property
+- commands: nice and renice
+- range of priority -20(highest priority) - 0(default)- 19(lowest priority)
+- to chek priority = ps -l pid
+- to renice
+syntax : renice value pid
+
+
+---------------------------------------------------------------
+kill command : 
+-it is used to terminate process manually.
+kill -l
+syntax:
+kill [signal no.] PID
+- 15=process ask to stop
+- 9= process forcefully stop
+- 1= process hang up
+
+---------------------------------------------------------------
+JOB SHEDULINNG
+
+-it is process ,which alows user to submit command at a specific time.
+ -"cron" command
+it is used to shedule repetative task.
+cronrab can executes job repeatedly for a time interwal.
+symtax:
+--crontab
+options:
+- -e edit 
+- -l list
+- -r remove.
+
+*  *  *  *  *
+|  |  |  |  |
+|  |  |  |  |____days of the week
+|  |  |  |_______month of the year
+|  |  |__________day of the month(1-31) 
+|  |_____________ hrs(0-23) 
+|________________ mi. (0-59)
+|
